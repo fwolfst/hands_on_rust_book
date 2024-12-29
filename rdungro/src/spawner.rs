@@ -4,6 +4,10 @@ pub fn spawn_player(ecs: &mut World, pos: Point) {
     ecs.push(
         (
             Player,
+            Health {
+                max: 20,
+                current: 20,
+            },
             pos,
             Render {
                 color: ColorPair::new(WHITE, BLACK),
